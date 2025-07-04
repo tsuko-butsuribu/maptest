@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="index.css">
-	<link rel="manifest" href="manifest.json">
-	<script src="index.js"></script>
-</head>
+<html lang="ja">
+  <head>
+    <link rel="manifest" href="manifest.json"/>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
 
-<body>
-	<div class="money">
-	<p id="money">traditional</p>
-	</div>
-	<button type="button" name="ボタンだよ">ボタンだよ
-	</button>
-	<script src="index.js"></script>
-</body>
+    <p>タスク管理アプリ</p>
+    <script>
+        if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('./main.js').then(function(registration) {
+          }, function(err) {
+            console.log('読み込み失敗');
+          });
+        });
+      }
+    </script>
+  </body>
 </html>
