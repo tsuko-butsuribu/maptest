@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <link rel="manifest" href="manifest.json"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>タスク管理アプリ</title> <link rel="manifest" href="manifest.json"/>
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
 
-    <p>テスト</p>
+    <p>タスク管理アプリ</p>
     <script>
         if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
+          // Service Workerのファイル名を sw.js に修正
           navigator.serviceWorker.register('./sw.js').then(function(registration) {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
           }, function(err) {
-            console.log('読み込み失敗');
+            console.log('ServiceWorker registration failed: ', err);
           });
         });
       }
     </script>
-    <script src="./sw.js"></script>
   </body>
 </html>
