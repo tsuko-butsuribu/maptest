@@ -1,5 +1,4 @@
 // PWA対応：Service Worker
-alert("あいうえお");
 var CACHE_NAME = 'task-management';
 var urlsToCache = [
 ];
