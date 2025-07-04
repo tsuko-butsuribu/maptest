@@ -1,5 +1,5 @@
-var test = "テストだよ";
-alert(test);
+var warn = "内容に間違いがないか確認してください";
+alert("aaaaa");
 
 // キャッシュファイルの指定
 var CACHE_NAME = 'pwa-sample-caches';
